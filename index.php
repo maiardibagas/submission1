@@ -1,6 +1,6 @@
 <html>
  <head>
- <Title>FORM REGISTRASI KHUSUS SUBMISSION</Title>
+ <Title>Registration Form</Title>
  <style type="text/css">
  	body { background-color: #fff; border-top: solid 10px #000;
  	    color: #333; font-size: .85em; margin: 20; padding: 20;
@@ -16,8 +16,8 @@
  </style>
  </head>
  <body>
- <h1>TOLONG REGISTRASI DISINI</h1>
- <p>Tolong isikan nama kamu dan email kamu (yang bener ya), lalu klik tombol <strong>Submit</strong> to register.</p>
+ <h1>Register here!</h1>
+ <p>Fill in your name and email address, then click <strong>Submit</strong> to register.</p>
  <form method="post" action="index.php" enctype="multipart/form-data" >
        Name  <input type="text" name="name" id="name"/></br></br>
        Email <input type="text" name="email" id="email"/></br></br>
@@ -29,9 +29,9 @@
     $host = "<maiardibagasappserver.database.windows.net>";
     $user = "<maiardibagas>";
     $pass = "<Muahmuah1234>";
-    $db = "<maiardibagasdb>";
+    $db = "<dbo.Registration>";
     try {
-        $conn = new PDO("sqlsrv:server = $host; Database = $db", $user);
+        $conn = new PDO("sqlsrv:server = $host; Database = $db", $user, $pass);
         $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
     } catch(Exception $e) {
         echo "Failed: " . $e;
