@@ -27,7 +27,7 @@
  </form>
  <?php
     $host = "maiardibagasappserver.database.windows.net";
-    $user = "maiardibagas";
+    $user = "maiardibagas@maiardibagasappserver";
     $pass = "Muahmuah1234";
     $db = "maiardibagasdb";
     try {
